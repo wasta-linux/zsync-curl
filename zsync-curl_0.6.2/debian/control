@@ -1,4 +1,4 @@
-Source: https://github.com/probonopd/zsync-curl/archive/refs/tags/_binaries.tar.gz
+Source: zsync-curl
 Section: utils
 Priority: optional
 Maintainer: Nate Marti <nate_marti@sil.org>
