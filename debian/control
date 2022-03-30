@@ -1,0 +1,17 @@
+Source: https://github.com/probonopd/zsync-curl/archive/refs/tags/_binaries.tar.gz
+Section: utils
+Priority: optional
+Maintainer: Nate Marti <nate_marti@sil.org>
+Build-Depends: debhelper (>= 10.0.0),
+  autotools-dev,
+  devscripts,
+  git,
+  libcurl4-openssl-dev
+Standards-Version: 4.4.0
+Homepage: https://github.com/probonopd/zsync-curl
+
+Package: zsync-curl
+Architecture: all
+Depends:
+Recommends:
+Description: Partial/differential file download client over HTTP(S).
