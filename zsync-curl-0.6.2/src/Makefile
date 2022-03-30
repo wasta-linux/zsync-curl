@@ -187,26 +187,26 @@ CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2 -g -Wall -Wwrite-strings -Winline -Wextra -Winline -Wmissing-noreturn -Wredundant-decls -Wnested-externs -Wundef -Wbad-function-cast -Wcast-align -Wvolatile-register-var -ffast-math
 CPP = gcc -E
-CPPFLAGS = 
+CPPFLAGS =
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
-ECHO_C = 
+ECHO_C =
 ECHO_N = -n
-ECHO_T = 
+ECHO_T =
 EGREP = /bin/grep -E
-EXEEXT = 
+EXEEXT =
 GREP = /bin/grep
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-LDFLAGS = 
-LIBOBJS = 
-LIBS = -lcurl 
+LDFLAGS =
+LIBOBJS =
+LIBS = -lcurl
 LN_S = ln -s
-LTLIBOBJS = 
+LTLIBOBJS =
 MAINT = #
 MAKEINFO = ${SHELL} /home/ubuntu/zsync-curl/src/autotools/missing --run makeinfo
 MKDIR_P = /bin/mkdir -p
@@ -216,13 +216,13 @@ PACKAGE_BUGREPORT = http://zsync.moria.org.uk/
 PACKAGE_NAME = zsync_curl
 PACKAGE_STRING = zsync_curl 0.6.2
 PACKAGE_TARNAME = zsync_curl
-PACKAGE_URL = 
+PACKAGE_URL =
 PACKAGE_VERSION = 0.6.2
 PATH_SEPARATOR = :
 RANLIB = ranlib
-SET_MAKE = 
+SET_MAKE =
 SHELL = /bin/bash
-STRIP = 
+STRIP =
 VERSION = 0.6.2
 abs_builddir = /home/ubuntu/zsync-curl/src
 abs_srcdir = /home/ubuntu/zsync-curl/src
@@ -232,12 +232,12 @@ ac_aux_dir = autotools
 ac_ct_CC = gcc
 am__include = include
 am__leading_dot = .
-am__quote = 
+am__quote =
 am__tar = $${TAR-tar} chof - "$$tardir"
 am__untar = $${TAR-tar} xf -
 bindir = ${exec_prefix}/bin
 build = x86_64-unknown-linux-gnu
-build_alias = 
+build_alias =
 build_cpu = x86_64
 build_os = linux-gnu
 build_vendor = unknown
@@ -248,7 +248,7 @@ docdir = $(prefix)/share/doc/zsync_curl
 dvidir = ${docdir}
 exec_prefix = ${prefix}
 host = x86_64-unknown-linux-gnu
-host_alias = 
+host_alias =
 host_cpu = x86_64
 host_os = linux-gnu
 host_vendor = unknown
@@ -264,15 +264,16 @@ mandir = ${datarootdir}/man
 mkdir_p = /bin/mkdir -p
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /usr/local
+#prefix = /usr/local
+prefix = $(DESTDIR)/usr
 program_transform_name = s,x,x,
 psdir = ${docdir}
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
 srcdir = .
 sysconfdir = ${prefix}/etc
-target_alias = 
-top_build_prefix = 
+target_alias =
+top_build_prefix =
 top_builddir = .
 top_srcdir = .
 AUTOMAKE_OPTIONS = check-news
@@ -282,7 +283,7 @@ zsync_curl_SOURCES = client.c http.c http.h url.c url.h progress.c progress.h ba
 zsync_curl_LDADD = libzsync/libzsync.a librcksum/librcksum.a zlib/libinflate.a $(LIBOBJS)
 EXTRA_zsync_curl_SOURCES = getaddrinfo.h
 
-# From "GNU autoconf, automake and libtool" Vaughan, Elliston, 
+# From "GNU autoconf, automake and libtool" Vaughan, Elliston,
 # #  Tromey and Taylor, publisher New Riders, p.134
 # # They made me do it! :-)
 AUX_DIST_GEN = \
@@ -343,7 +344,7 @@ config.h: stamp-h1
 stamp-h1: $(srcdir)/config.h.in $(top_builddir)/config.status
 	@rm -f stamp-h1
 	cd $(top_builddir) && $(SHELL) ./config.status config.h
-$(srcdir)/config.h.in: # $(am__configure_deps) 
+$(srcdir)/config.h.in: # $(am__configure_deps)
 	($(am__cd) $(top_srcdir) && $(AUTOHEADER))
 	rm -f stamp-h1
 	touch $@
@@ -390,7 +391,7 @@ uninstall-binPROGRAMS:
 
 clean-binPROGRAMS:
 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
-zsync_curl$(EXEEXT): $(zsync_curl_OBJECTS) $(zsync_curl_DEPENDENCIES) $(EXTRA_zsync_curl_DEPENDENCIES) 
+zsync_curl$(EXEEXT): $(zsync_curl_OBJECTS) $(zsync_curl_DEPENDENCIES) $(EXTRA_zsync_curl_DEPENDENCIES)
 	@rm -f zsync_curl$(EXEEXT)
 	$(LINK) $(zsync_curl_OBJECTS) $(zsync_curl_LDADD) $(LIBS)
 
